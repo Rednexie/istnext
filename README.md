@@ -1,124 +1,117 @@
-# iettnext – Istanbul Public Transport Assistant
+# istnext (formerly iettnext)
 
-> [!Caution]
-> Dear Users
->
-> iettnext has been temporarily shut down due to administrative pressure and data access restrictions imposed by the Istanbul Metropolitan Municipality (İBB).
-> 
-> We plan to hold the necessary meetings with municipality during the upcoming summer to resolve these issues and ensure the project's sustainability.
-> 
-> **iettnext v2** will be released as a fully **open-source** project, including the backend architecture. Thank you for your continued support and understanding.
-> 
-> You can alternatively use the official application [Otobüsüm Nerede](https://play.google.com/store/apps/details?id=com.iett.otobusumnerede), for now.
->
-> ~ rednexie
+> Real-time Istanbul public transport vehicle tracking and city data platform.
+> **"Bringing data to 16 million people."**
 
+ [istnext.com.tr](https://istnext.com.tr)
+**v2:** [istnext.com.tr/app](https://istnext.com.tr/app)
+**v1:** [iett.rednexie.workers.dev](https://iett.rednexie.workers.dev)
 
-[🇹🇷 Türkçe](./README.tr.md)
-
-## 📱 App Pages
-
-### 1. **Vehicle Search Page**
-
-* Search by license plate/door code
-* Real-time vehicle tracking
-* "Sprint line" status indicator
-* Route and line details
-
-### 2. **Stop Search Page**
-
-* Smart search suggestions
-* Real-time arrival times
-* Detailed vehicle info (model, speed, features)
-* Features (ibbWifi, USB charging, wheelchair access, bike access, "sprint" line, etc.)
-
-### 3. **Line Search Page**
-
-* Smart search suggestions
-* Route info and schedule
-* Line announcements (delays, changes)
-
-### 4. **Map Page (Coming Soon)**
-
-* Live vehicle locations
-* Stop and depot locations
-* Customizable map layers
-
-### 5. **Archived Lines**
-
-* Information on discontinued lines
-* Historical route data
-* Reference for transport history
+🇹🇷 [Türkçe README](./README.tr.md)
 
 ---
 
-## ✨ Key Features
+## About
 
-### 🛡️ Privacy & Performance
+istnext is an independent, open-source project that brings Istanbul's public transport and city data together in a single, fast interface. It lets you track buses live, query stops and lines, look up vehicle details, and explore city statistics.
 
-* No data collection
-* Minimal permission requirements
-* Low data usage
-* Fast launch and smooth usage
+> **Disclaimer:** istnext is **not** an official service of the Istanbul Metropolitan Municipality (İBB) or İETT. It is built by independent developers.
 
-### 🔍 Smart Search
-
-* Instant suggestions
-* Fuzzy matching
-
-### 🚌 Real-Time Info
-
-* Live vehicle positions
-* Accurate arrival times
-* Departure status indicators
-
-### 🗺️ Comprehensive Data
-
-* Current lines and vehicles
-* Historical/discontinued lines
-* Detailed stop features
-
-### 🤖 AI Assistant
-
-* Search with natural language
-* Advanced tool kit
-* Unlimited usage
+> **Data availability notice:** Some features and information that were previously available are no longer shared, because of the administrative pressure and data access restrictions imposed by the Istanbul Metropolitan Municipality (İBB). As a result, some features may be limited, unavailable, or removed over time.
 
 ---
 
-## 🏗️ Technologies Used
+## Features
 
-* **React Native & Expo**
-* **expo-router**
-* **react-native-maps**
-* **@expo/vector-icons**
+### 🚍 Vehicle Query (`/app/arac`)
+- Look up live İETT, ÖHO and Otobüs A.Ş. vehicles by **door code** or **plate number**
+- Live GPS position, speed, model and technical/fleet details
+- View the vehicle's location on a map and open it in Google Maps
+- Favorite vehicles
+- Share a vehicle card: native share, WhatsApp, copy as Markdown, copy as text, or share link
+- "View on İETT" shortcut
+
+### 🚏 Journey: Stop & Line Query (`/app/yolculuk`)
+- **Stop search:** stop details and live arrival times of approaching buses
+- **Line search:** route, timetable (departure times), vehicles currently on the line, and line info
+- Direction switching and line filtering at a stop
+- Stop and line announcements, with the option to share them
+- Line-type indicators: ÖHO (red) and İETT (normal)
+- Favorites for stops and lines
+- Offline mode: previously saved data is shown when you're offline
+
+### 🏠 Home (`/app`)
+- Quick access to Stop, Line, Vehicle and Explore
+- **Traffic status:** traffic index, plus Europe and Anatolia side percentages
+- **City announcements:** filter by All / Route & Road / Trip Cancellations
+- **My Shortcuts:** saved favorite stops, lines and vehicles
+- **Sync key:** move your favorites between devices with a personal key (format `IST-XXXX-XXXX-XXXX`), with no account needed
+
+### 🧭 Explore & Data Hub (`/app/kesfet`)
+- Open-data statistics, metro line routes, fuel consumption, archived trips and live announcements
+- Old lines and archive: past years' line data, removed routes and archived trip records
+- City information: Istanbul dam occupancy rates, live traffic density and other city data
+- Links to the official source pages
+
+### 📱 PWA
+- Installable as an app on your device, for a faster, full-screen experience
+- Optional launch notifications
+- Dark and light themes
 
 ---
 
-## 🙏 Thanks To
+## Privacy (summary)
 
-* Istanbul Electricity, Tramway and Tunnel Authority (IETT) for open(!) data
-* Expo and React Native teams
-* Cloudflare Workers and Deno for hosting
-* Github for repository hosting
+- **Location:** your device location is processed only temporarily in your browser's memory for nearby-stop features and is not saved to servers.
+- **Local Storage:** used only for your theme and favorite stops/lines. There are no advertising cookies and no profiling.
+- **Security data:** your IP address and basic device data may be processed for security, bot prevention and anonymous statistics.
+- **Infrastructure:** Cloudflare is used for network security and fast delivery.
+
+Full text: see the *Privacy Policy* and *Terms of Use* on the website.
 
 ---
 
-# 📸 Screenshots
+## Data Sources & Accuracy
 
-![Image](https://github.com/user-attachments/assets/df1a7b2a-c124-47ab-b78d-c5892539b80c)
-![Image](https://github.com/user-attachments/assets/1e81b892-81d7-4828-b4c2-eae9ad3bdd17)
-![Image](https://github.com/user-attachments/assets/96cae200-0226-4e8d-9a3a-9d3523e76fdc)
-![Image](https://github.com/user-attachments/assets/d9fabf80-81db-42dc-9a14-b2ec89527427)
-![Image](https://github.com/user-attachments/assets/427158e1-1961-4554-b494-a5d3ec84dd95)
-![Image](https://github.com/user-attachments/assets/e07c2171-b863-430a-b978-7f19cddece8c)
-![Image](https://github.com/user-attachments/assets/27a67215-0cd8-4ee5-884e-56d610b7f111)
-![Image](https://github.com/user-attachments/assets/74a3ae3b-d866-439f-b7b6-dd02bb1dfb8b)
-![Image](https://github.com/user-attachments/assets/9466332c-2956-4c40-9f2c-6ed215b1ce0a)
-![Image](https://github.com/user-attachments/assets/c5068aec-912e-4e48-aa0a-9a10a38da2c6)
-![Image](https://github.com/user-attachments/assets/bf30f6f6-e627-4d9c-8c83-9b019a3cce1a)
-![Image](https://github.com/user-attachments/assets/f43ec780-c249-438a-87b8-cd03012199e9)
-![Image](https://github.com/user-attachments/assets/57534a69-8d9a-46a5-923a-7cdf4a82bed7)
-![Image](https://github.com/user-attachments/assets/91cf1dac-3b97-4729-bc61-a3c534393e73)
-![Image](https://github.com/user-attachments/assets/f37be125-5089-47d3-90ec-c448148fcbd7)
-![Image](https://github.com/user-attachments/assets/0e07bb42-43af-459d-9829-d5faa26fba33)
+Vehicle positions, trip info, stop data and other statistics are compiled from various open-data sources, including the [İBB Open Data Portal](https://data.ibb.gov.tr/). Some data that was previously shared is no longer provided by İBB, so the related features and information are no longer available. istnext cannot be held responsible for delayed, incorrect or missing data. The service is provided "as is", with no uptime guarantee.
+
+---
+
+## Tech Stack
+
+- **Runtime / Hosting:** Bun.js
+- **Database:** PostgreSQL
+- **Language:** TypeScript
+- **Frontend:** HTML, JavaScript, CSS
+
+---
+
+## Contributing
+
+Issues and pull requests are welcome. Please open an issue first to discuss major changes.
+
+---
+
+## License
+
+The source code of this project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
+
+Data obtained from the İBB Open Data Portal is subject to its own terms: [data.ibb.gov.tr/license](https://data.ibb.gov.tr/license).
+
+---
+
+## Changelog
+
+### v2.0.1
+- Added support for dam information
+- Old lines data is back
+- Fixed an issue with the vehicle information page
+
+### v2.0.0
+- Added Progressive Web App (PWA) support
+- Expanded the available metrics section on the Explore page
+- Added formatted sharing for query results
+- Added light theme
+
+### v1 — iettnext
+- Initial release, still available at [iett.rednexie.workers.dev](https://iett.rednexie.workers.dev)
