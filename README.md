@@ -17,7 +17,8 @@
 
 istnext is an independent, open-source project that brings Istanbul's public transport and city data together in a single, fast interface. It lets you track buses live, query stops and lines, look up vehicle details, and explore city statistics.
 
-> **Disclaimer:** istnext is **not** an official service of the Istanbul Metropolitan Municipality (İBB) or İETT. It is built by independent developers.
+> [!Caution]
+>  **Disclaimer:** istnext is **not** an official service of the Istanbul Metropolitan Municipality (İBB) or İETT. It is built by independent developers.
 
 > [!Caution]
 > **Data availability notice:** Some features and information that were previously available are no longer shared, because of the administrative pressure and data access restrictions imposed by the Istanbul Metropolitan Municipality (İBB). As a result, some features may be limited, unavailable, or removed over time.
