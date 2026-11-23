@@ -1,117 +1,123 @@
-# iettnext – İstanbul Toplu Taşıma Asistanı
+# istnext (eski adıyla iettnext)
 
+> Gerçek zamanlı İstanbul toplu taşıma araç takibi ve şehir verileri platformu.
+> **"16 milyonu verisine kavuşturuyoruz."**
+
+**v2:** [istnext.com.tr/app](https://istnext.com.tr/app)
+
+
+
+**v1:** [iett.rednexie.workers.dev](https://iett.rednexie.workers.dev)
+
+
+
+🇬🇧 [English README](./README.md)
+
+---
+
+## Hakkında
+
+istnext, İstanbul'un toplu taşıma ve şehir verilerini tek bir hızlı arayüzde buluşturan bağımsız ve açık kaynaklı bir projedir. Otobüsleri canlı takip edebilir, durak ve hat sorgulayabilir, araç bilgilerine ulaşabilir ve şehir istatistiklerini keşfedebilirsiniz.
 
 > [!Caution]
-> Değerli Kullanıcılar,
-> 
-> iettnext, İstanbul Büyükşehir Belediyesi (İBB) tarafından uygulanan idari baskılar ve veri erişim kısıtlamaları nedeniyle geçici olarak kapatılmıştır. 
-> 
-> Yaz dönemi boyunca belediye yetkilileriyle gerekli görüşmelerin gerçekleştirilmesi planlanmaktadır. Hedefimiz, projenin yasal altyapısını netleştirerek hizmetin devamlılığını sağlamaktır.
-> 
-> **iettnext v2** sürümü; backend (arka uç) kodları da dahil olmak üzere tamamen **açık kaynaklı** olarak yayınlanacaktır. Sabrınız ve desteğiniz için teşekkür ederiz.
->
-> Şimdilik, resmi uygulama olan [Otobüsüm Nerede](https://play.google.com/store/apps/details?id=com.iett.otobusumnerede)'yi kullanabilirsiniz.
->
-> ~ rednexie
+> **Uyarı:** istnext, İstanbul Büyükşehir Belediyesi (İBB) veya İETT'nin resmi bir uygulaması ya da hizmeti **değildir**. Bağımsız geliştiriciler tarafından hazırlanmıştır.
 
-
-
-[🇬🇧 English](./README.md)
-
-
-
-## 📱 Uygulama Sayfaları
-
-### 1. **Araç Arama Sayfası**
-- Plaka/kapı kodu ile arama
-- Gerçek zamanlı araç takibi
-- "Depar" (kalkış) durumu göstergesi
-- Hat bilgisi ve güzergah detayları
-
-### 2. **Durak Arama Sayfası**
-- Akıllı arama önerileri
-- Gerçek zamanlı varış saatleri
-- Detaylı araç bilgileri (model, hız, özellikler)
-- Özellikler (İBB WiFi, USB şarj, engelli erişimi, bisiklet erişimi, "depar" hattı vb.)
-
-### 3. **Hat Arama Sayfası**
-- Akıllı arama önerileri
-- Güzergah bilgisi ve tarife
-- Hat duyuruları (gecikmeler, değişiklikler)
-
-### 4. **Harita Sayfası (Yakında)**
-- Canlı araç konumları
-- Durak ve gar lokasyonları
-- Özelleştirilebilir katmanlar
-
-### 5. **Eski Hatlar Arşivi**
-- Kaldırılan hat bilgileri
-- Tarihi güzergah verileri
-- Ulaşım tarihi referansı
+> [!Caution]
+> **Veri erişilebilirliği notu:** Daha önce sunulan bazı özellikler ve bilgiler, İBB ilgili verileri paylaşmayı bıraktığı için artık sağlanmamaktadır. Bu nedenle bazı özellikler kısıtlı olabilir, kullanılamayabilir veya zamanla kaldırılabilir.
 
 ---
 
-## ✨ Temel Özellikler
+## Özellikler
 
-### 🛡️ Gizlilik & Performans
-- Veri toplama yok
-- Minimum izin gereksinimi
-- Düşük veri kullanımı
-- Hızlı açılış ve sorunsuz kullanım
+### 🚍 Araç Sorgulama (`/app/arac`)
+- **Kapı kodu** veya **plaka** ile canlı İETT, ÖHO ve Otobüs A.Ş. araçlarını sorgulama
+- Anlık GPS konumu, hız, model ve teknik/filo bilgileri
+- Aracın konumunu haritada görme ve Google Maps'te açma
+- Favori araçlar
+- Araç kartını paylaşma: cihazda paylaş, WhatsApp, Markdown kopyala, metin kopyala, paylaşım bağlantısı
+- "İETT'de Gör" kısayolu
 
-### 🔍 Akıllı Arama
-- Anında öneriler
-- Bulanık eşleştirme
+### 🚏 Yolculuk: Durak ve Hat Sorgulama (`/app/yolculuk`)
+- **Durak arama:** durak bilgileri ve yaklaşan otobüslerin canlı varış süreleri
+- **Hat arama:** güzergâh, sefer saatleri (kalkış), hattaki canlı araçlar ve hat bilgisi
+- Durakta yön değiştirme ve hat filtreleme
+- Durak ve hat duyuruları, duyuruları paylaşma
+- Hat türü göstergeleri: ÖHO (kırmızı) ve İETT (normal)
+- Durak ve hat favorileri
+- Çevrimdışı mod: bağlantı yokken önceden kaydedilmiş veriler gösterilir
 
-### 🚌 Anlık Bilgi
-- Canlı araç konumları
-- Kesin varış saatleri
-- Kalkış durum göstergeleri
+### 🏠 Ana Sayfa (`/app`)
+- Durak, Hat, Araç ve Keşfet'e hızlı erişim
+- **Trafik durumu:** trafik endeksi ile Avrupa ve Anadolu yakası yüzdeleri
+- **Şehir duyuruları:** Tümü / Güzergâh-Yol / Sefer İptalleri filtreleri
+- **Kısayollarım:** kayıtlı favori durak, hat ve araçlar
+- **Senkronizasyon anahtarı:** hesap açmadan, kişisel anahtarla (`IST-XXXX-XXXX-XXXX` biçimi) favorilerinizi cihazlar arasında taşıma
 
-### 🗺️ Kapsamlı Veri
-- Güncel hatlar ve araçlar
-- Tarihi/kaldırılan hatlar
-- Durak özellik detayları
+### 🧭 Keşfet ve Veri Merkezi (`/app/kesfet`)
+- Açık veri istatistikleri, metro hat güzergâhları, yakıt tüketimi, arşiv seferleri ve anlık duyurular
+- Eski hatlar ve arşiv: geçmiş yılların hat verileri, kaldırılan rotalar ve arşivlenmiş sefer kayıtları
+- Şehir bilgileri: İstanbul baraj doluluk oranları, canlı trafik yoğunluğu ve güncel kent verileri
+- Resmi kaynak sayfalara bağlantılar
 
-### 🤖 AI Asistanı
-- Doğal dil ile arama
-- Detaylı tool kit
-- Sınırsız kullanım
-
-
----
-
-## 🏗️ Kullanılan Teknolojiler
-- **React Native & Expo**
-- **expo-router**
-- **react-native-maps**
-- **@expo/vector-icons**
-
----
-
-## 🙏 Teşekkürler
-- İstanbul Elektrik Tramvay ve Tünel (İETT) açık(!) veri için
-- Expo ve React Native ekipleri
-- Cloudflare Workers ve Deno (barındırma için)
-- Github(kaynak kodu barındırma için)
+### 📱 PWA
+- Cihaza uygulama olarak yüklenebilir; daha hızlı ve tam ekran deneyim
+- İsteğe bağlı lansman bildirimleri
+- Karanlık ve aydınlık tema
 
 ---
 
-# 📸 Ekran Görüntüleri
+## Gizlilik (özet)
 
-![Image](https://github.com/user-attachments/assets/df1a7b2a-c124-47ab-b78d-c5892539b80c)
-![Image](https://github.com/user-attachments/assets/1e81b892-81d7-4828-b4c2-eae9ad3bdd17)
-![Image](https://github.com/user-attachments/assets/96cae200-0226-4e8d-9a3a-9d3523e76fdc)
-![Image](https://github.com/user-attachments/assets/d9fabf80-81db-42dc-9a14-b2ec89527427)
-![Image](https://github.com/user-attachments/assets/427158e1-1961-4554-b494-a5d3ec84dd95)
-![Image](https://github.com/user-attachments/assets/e07c2171-b863-430a-b978-7f19cddece8c)
-![Image](https://github.com/user-attachments/assets/27a67215-0cd8-4ee5-884e-56d610b7f111)
-![Image](https://github.com/user-attachments/assets/74a3ae3b-d866-439f-b7b6-dd02bb1dfb8b)
-![Image](https://github.com/user-attachments/assets/9466332c-2956-4c40-9f2c-6ed215b1ce0a)
-![Image](https://github.com/user-attachments/assets/c5068aec-912e-4e48-aa0a-9a10a38da2c6)
-![Image](https://github.com/user-attachments/assets/bf30f6f6-e627-4d9c-8c83-9b019a3cce1a)
-![Image](https://github.com/user-attachments/assets/f43ec780-c249-438a-87b8-cd03012199e9)
-![Image](https://github.com/user-attachments/assets/57534a69-8d9a-46a5-923a-7cdf4a82bed7)
-![Image](https://github.com/user-attachments/assets/91cf1dac-3b97-4729-bc61-a3c534393e73)
-![Image](https://github.com/user-attachments/assets/f37be125-5089-47d3-90ec-c448148fcbd7)
-![Image](https://github.com/user-attachments/assets/0e07bb42-43af-459d-9829-d5faa26fba33)
+- **Konum:** cihaz konumunuz yalnızca yakındaki durak özellikleri için tarayıcı belleğinde geçici olarak işlenir, sunucuya kaydedilmez.
+- **Local Storage:** yalnızca tema ve favori durak/hat tercihleriniz için kullanılır. Reklam çerezi veya profilleme yoktur.
+- **Güvenlik verileri:** güvenlik, bot engelleme ve anonim istatistikler için IP adresiniz ve temel cihaz verileriniz işlenebilir.
+- **Altyapı:** ağ güvenliği ve hızlı hizmet için Cloudflare kullanılır.
+
+Tam metin için web sitesindeki *Gizlilik Politikası* ve *Kullanım Koşulları* bölümlerine bakın.
+
+---
+
+## Veri Kaynakları ve Doğruluk
+
+Araç konumları, sefer bilgileri, durak verileri ve diğer istatistikler, [İBB Açık Veri Portalı](https://data.ibb.gov.tr/) dahil çeşitli açık veri kaynaklarından derlenir. Daha önce paylaşılan bazı veriler İBB tarafından artık sağlanmadığından, ilgili özellikler ve bilgiler kullanılamamaktadır. Verilerin gecikmesinden, hatalı gelmesinden veya eksikliğinden istnext sorumlu tutulamaz. Hizmet "olduğu gibi" sunulur ve kesintisiz çalışma garantisi verilmez.
+
+---
+
+## Teknoloji
+
+- **Çalışma ortamı / Barındırma:** Bun.js
+- **Veritabanı:** PostgreSQL
+- **Dil:** TypeScript
+- **Ön yüz:** HTML, JavaScript, CSS
+
+---
+
+## Katkıda Bulunma
+
+Issue ve pull request'ler memnuniyetle karşılanır. Büyük değişiklikler için önce bir issue açarak konuşalım.
+
+---
+
+## Lisans
+
+Bu projenin kaynak kodu **MIT Lisansı** ile lisanslanmıştır. Ayrıntılar için [LICENSE](./LICENSE) dosyasına bakın.
+
+İBB Açık Veri Portalı'ndan alınan veriler kendi kullanım koşullarına tabidir: [data.ibb.gov.tr/license](https://data.ibb.gov.tr/license).
+
+---
+
+## Değişiklik Günlüğü
+
+### v2.0.1
+- Baraj bilgileri desteği eklendi
+- Eski hat verileri geri geldi
+- Araç bilgi sayfasındaki sorun düzeltildi
+
+### v2.0.0
+- Progressive Web App (PWA) desteği eklendi
+- Keşfet sayfasındaki metrikler bölümü genişletildi
+- Sorgu sonuçları için biçimlendirilmiş paylaşım eklendi
+- Aydınlık tema eklendi
+
+### v1 — iettnext
+- İlk sürüm, [iett.rednexie.workers.dev](https://iett.rednexie.workers.dev) adresinde hâlâ kullanılabilir
