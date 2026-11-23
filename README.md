@@ -19,6 +19,7 @@ istnext is an independent, open-source project that brings Istanbul's public tra
 
 > **Disclaimer:** istnext is **not** an official service of the Istanbul Metropolitan Municipality (İBB) or İETT. It is built by independent developers.
 
+> [!Caution]
 > **Data availability notice:** Some features and information that were previously available are no longer shared, because of the administrative pressure and data access restrictions imposed by the Istanbul Metropolitan Municipality (İBB). As a result, some features may be limited, unavailable, or removed over time.
 
 ---
