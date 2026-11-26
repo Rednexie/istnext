@@ -1,6 +1,6 @@
 # istnext (formerly iettnext)
 
-> Real-time Istanbul public transport vehicle tracking and city data platform.
+
 > **"Making Istanbul's data owned to its 16 million people."**
 
 **v2:** [istnext.com.tr/app](https://istnext.com.tr/app)
