@@ -74,7 +74,7 @@ Araç konumları, sefer bilgileri, durak verileri ve diğer istatistikler, [İBB
 
 ## Teknoloji
 
-- **Sunucu Runtime'ı:** Bun.js
+- **Sunucu Runtime'ı:** Cloudflare Workers
 - **Veritabanı:** PostgreSQL
 - **Dil:** TypeScript
 - **Web Arayüzü:** HTML, JavaScript, CSS
