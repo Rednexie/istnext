@@ -72,7 +72,7 @@ Vehicle positions, trip info, stop data and other statistics are compiled from v
 
 ## Tech Stack
 
-- **Server Runtime:** Bun.js
+- **Server Runtime:** Cloudflare Workers
 - **Database:** PostgreSQL
 - **Language:** TypeScript
 - **Frontend:** HTML, JavaScript, CSS
